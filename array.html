@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ar=[10,20,30,40,50];
+        let b=ar.map((value)=>{
+            return value+1;
+        })
+        console.log(b);
+
+        let c=ar.filter((value)=>{
+            return value>25;
+        })
+        console.log(c)
+
+        let d=ar.reduce((x,y)=>{return x+y})
+        console.log(d)
+    </script>
+</body>
+</html>

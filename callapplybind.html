@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // call
+        let name={
+            firstName:"Sohel",
+            lastName:"Shaikh",
+        }
+        let fullName=function(country,state){
+            return this.firstName +" "+ this.lastName +" "+ country+ " "+state;
+        }
+        // console.log(name.fullName());
+        console.log(fullName.call(name,"India","Gujrat"));
+        let name2={
+            firstName:"Utsav",
+            lastName:"Gohel"
+        }
+        // console.log( name.fullName.call(name2));
+        console.log( fullName.call(name2,"India","Maharastra"));
+    
+    
+    // Aplly
+
+        console.log(fullName.apply(name,["India","Karnataka"]));
+
+    // Bind
+    let printMyName=fullName.bind(name,"India","Delhi")
+    console.log(printMyName());
+
+    </script>
+</body>
+</html>
