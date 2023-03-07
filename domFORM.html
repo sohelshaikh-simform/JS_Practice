@@ -16,7 +16,7 @@
         <label for="lName">Enter Value:</label>
         <input id="lName" name="lName" placeholder="Enter Your lasttname" type="text"><br><br>
 
-        <input type="submit" value="Click Me">
+        <input type="submit" name="submit" value="Click Me">
     </form>
 
     <script>
@@ -27,6 +27,14 @@
                 return false;
             }
         }
+        let fname=document.forms["form1"]["fName"].value
+            if(fname==""){
+                let submit=document.forms["form1"]["submit"]
+                // console.log(submit);
+                submit.class=""
+                submit.style.transition = '4s';
+                submit.style.transform = `translateX(${50}px)`;
+            }
     </script>
 </body>
 </html>
