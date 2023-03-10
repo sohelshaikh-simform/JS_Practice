@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let radius=[1,2,4,8]
+        function area(radius){
+            return 2*Math.PI*radius*radius;
+        }
+        function calclu(radius,logic){
+            let ans=[];
+            for(let i in radius){
+                ans.push(logic(radius[i]));
+            }
+            return ans;
+        }
+        console.log(calclu(radius,area));
+    </script>
+</body>
+</html>
